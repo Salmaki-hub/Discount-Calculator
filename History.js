@@ -23,12 +23,6 @@ export default function History({ navigation, route }) {
     }
   };
 
-  const removeRecord = (itemID) => {
-      setDataObj((currentItems) => {
-        return currentItems.filter((item) => item.id !== itemID);
-      });
-  };
-
   return (
     <View style={styles.mainView}>
       <StatusBar backgroundColor="#196F3D" />
@@ -45,7 +39,7 @@ export default function History({ navigation, route }) {
           renderItem={({ item, index }) => {
             if (item != undefined) {
               return (
-                <TouchableOpacity onPress={() => removeRecord(item.id)}>
+                
                   <DataTable.Row>
                     <DataTable.Cell>Rs {item.original_Price}</DataTable.Cell>
                     <DataTable.Cell numeric>
@@ -55,7 +49,7 @@ export default function History({ navigation, route }) {
                       Rs {item.final_Price_Var}
                     </DataTable.Cell>
                   </DataTable.Row>
-                </TouchableOpacity>
+                
               );
             }
           }}
