@@ -5,8 +5,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Text, View, StyleSheet } from 'react-native';
 
 // You can import from local files
-import HomeScreen from './components/HomeScreen';
-import History from './components/History';
+import HomeScreen from './HomeScreen';
+import History from './History';
 
 const Stack = createStackNavigator();
 
